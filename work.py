@@ -22,7 +22,10 @@ class Ball:
         self.image.draw(self.x, self.y)
         pass
     def update(self):
-        self.y += self.up_speed
+        if(self.y < 600):
+            self.y += self.up_speed
+        else :
+            self.y = 550
         pass
 
 class Boy:
