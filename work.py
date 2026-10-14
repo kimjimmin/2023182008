@@ -15,7 +15,7 @@ class Grass:
 class Ball:
     def __init__(self):
         self.image = load_image(str(IMAGE_DIR / 'ball21x21.png'))
-        self.x, self.y = 30, 90
+        self.x, self.y = random.randint(0, 800), 90
         pass
     def draw(self):
         self.image.draw(self.x, self.y)
