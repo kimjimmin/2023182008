@@ -24,7 +24,7 @@ class Ball:
         pass
     def update(self):
         if(self.is_up):
-            if(self.y >= 600):
+            if(self.y >= 590-self.speed):
                 self.is_up = False
             self.y += self.speed
             pass
