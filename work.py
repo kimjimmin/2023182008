@@ -16,13 +16,13 @@ class Ball:
     def __init__(self):
         self.image = load_image(str(IMAGE_DIR / 'ball21x21.png'))
         self.x, self.y = random.randint(0, 800), 90
-        up_speed = random.randint(3, 13)
+        self.up_speed = random.randint(3, 13)
         pass
     def draw(self):
         self.image.draw(self.x, self.y)
         pass
     def update(self):
-        self.y += up_speed
+        self.y += self.up_speed
         pass
 
 class Boy:
