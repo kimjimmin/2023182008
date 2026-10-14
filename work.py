@@ -15,8 +15,8 @@ class Grass:
 class Ball:
     def __init__(self):
         self.image = load_image(str(IMAGE_DIR / 'ball21x21.png'))
-        self.x, self.y = random.randint(0, 800), 90
-        self.up_speed = random.randint(3, 13)
+        self.x, self.y = random.randint(0, 800), 0
+        self.speed = random.randint(3, 13)
         self.is_up = True
         pass
     def draw(self):
@@ -26,12 +26,12 @@ class Ball:
         if(self.is_up):
             if(self.y >= 600):
                 self.is_up = False
-            self.y += self.up_speed
+            self.y += self.speed
             pass
         else:
             if(self.y < 580):
                 self.is_up = True
-            self.y -= self.up_speed
+            self.y -= self.speed
 
 class Boy:
     def __init__(self):
