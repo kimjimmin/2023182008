@@ -18,13 +18,14 @@ class Ball:
         self.x, self.y = random.randint(0, 800), 0
         self.speed = random.randint(3, 13)
         self.is_up = True
+        self.scale = random.randint(10, 50)
         pass
     def draw(self):
-        self.image.draw(self.x, self.y)
+        self.image.clip_draw(0, 0, self.scale, self.scale,self.x, self.y)
         pass
     def update(self):
         if(self.is_up):
-            if(self.y >= 590-self.speed):
+            if(self.y >= 600-self.scale/2 - self.speed):
                 self.is_up = False
             self.y += self.speed
             pass
