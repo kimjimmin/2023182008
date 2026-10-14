@@ -18,6 +18,7 @@ class Ball:
         self.x, self.y = 30, 90
         pass
     def draw(self):
+        self.image.draw(self.x, self.y)
         pass
     def update(self):
         pass
