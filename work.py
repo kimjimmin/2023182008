@@ -21,6 +21,7 @@ class Ball:
         self.image.draw(self.x, self.y)
         pass
     def update(self):
+        self.y += 8
         pass
 
 class Boy:
