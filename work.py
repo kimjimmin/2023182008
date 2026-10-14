@@ -17,6 +17,7 @@ class Ball:
         self.image = load_image(str(IMAGE_DIR / 'ball21x21.png'))
         self.x, self.y = random.randint(0, 800), 90
         self.up_speed = random.randint(3, 13)
+        self.is_up = True
         pass
     def draw(self):
         self.image.draw(self.x, self.y)
