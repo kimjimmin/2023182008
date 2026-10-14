@@ -14,6 +14,8 @@ class Grass:
 
 class Ball:
     def __init__(self):
+        self.image = load_image(str(IMAGE_DIR / 'ball21x21.png'))
+        self.x, self.y = 30, 90
         pass
     def draw(self):
         pass
